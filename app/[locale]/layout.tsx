@@ -50,6 +50,12 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir="ltr" className={fontVariables}>
+      <head>
+        {/* JS বন্ধ থাকলে scroll-reveal সেকশনগুলো যেন লুকিয়ে না থাকে */}
+        <noscript>
+          <style>{`.reveal{opacity:1 !important;transform:none !important}`}</style>
+        </noscript>
+      </head>
       <body className="min-h-screen bg-ivory antialiased">
         <NextIntlClientProvider>
           <a

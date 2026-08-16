@@ -30,6 +30,13 @@ export function Reveal({
       return;
     }
 
+    // deep-link বা restore-scroll-এ viewport-এর উপরে পড়ে যাওয়া অংশ যেন
+    // লুকিয়ে না থাকে — সেগুলো সরাসরি দৃশ্যমান।
+    if (node.getBoundingClientRect().bottom < 0) {
+      setVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
