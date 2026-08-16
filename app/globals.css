@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────
+   Abu Sayed (Section 6)
+   ফাইলটা এখনো আসেনি। public/fonts/AbuSayed.woff2 বসালেই
+   এই @font-face আপনা থেকে কাজ করবে; ততক্ষণ ব্রাউজার চুপচাপ
+   পরের fallback-এ (Noto Serif Bengali) চলে যাবে।
+   ───────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Abu Sayed';
+  src: url('/fonts/AbuSayed.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Section 5.1 · Colors ── */
+:root {
+  /* Green (primary) */
+  --green-900: #14261a;
+  --green-800: #1c3424;
+  --green-700: #26422f;
+  --green-600: #35573f;
+
+  /* Red family */
+  --maroon: #8c2b27;
+  --red: #c1272d;
+  --red-dark: #a11f24;
+
+  /* Canvas / neutrals */
+  --ivory: #f5efe3;
+  --ivory-2: #ede5d4;
+  --line: #dfd6c2;
+  --ink: #191a16;
+  --muted: #585a4f;
+  --on-dark: #f1eada;
+  --on-dark-muted: #b9c4b4;
+
+  /* Ornament */
+  --gold: #c4a24c;
+  --white: #ffffff;
+
+  /* ── Section 5.2 · Type scale (fluid) ── */
+  --fs-display: clamp(2.75rem, 6vw, 5.25rem);
+  --fs-h1: clamp(2.25rem, 4.5vw, 3.5rem);
+  --fs-h2: clamp(1.75rem, 3vw, 2.5rem);
+  --fs-h3: 1.5rem;
+  --fs-lg: 1.125rem;
+  --fs-body: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.75rem;
+
+  /* ── Section 5.3 · Spacing, radius, shadow, motion ── */
+  --space-base: 4px;
+  --section-y: clamp(4rem, 8vw, 7.5rem);
+  --container: 1200px;
+  --container-narrow: 760px;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(20, 38, 26, 0.06);
+  --shadow-md: 0 8px 24px rgba(20, 38, 26, 0.1);
+
+  --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --dur: 320ms;
+}
+
+@layer base {
+  * {
+    border-color: var(--line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--ivory);
+    color: var(--ink);
+    font-size: var(--fs-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* বাংলা locale: heading + body দুটোতেই বাংলা ফন্ট, generous leading */
+  html[lang='bn'] body {
+    font-family: theme('fontFamily.bn');
+    line-height: 1.85;
+  }
+
+  html[lang='en'] body {
+    font-family: theme('fontFamily.body');
+    line-height: 1.6;
+  }
+
+  html[lang='en'] h1,
+  html[lang='en'] h2,
+  html[lang='en'] h3,
+  html[lang='en'] h4 {
+    font-family: theme('fontFamily.display');
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.12;
+    font-weight: 400;
+  }
+
+  /* Section 13 — সব interactive element-এ দৃশ্যমান keyboard focus */
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--green-800);
+    color: var(--on-dark);
+  }
+}
+
+@layer components {
+  /* Section 5.3 — scroll reveal (Intersection Observer দিয়ে .is-visible বসে) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity var(--dur) var(--ease),
+      transform var(--dur) var(--ease);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Signature — মেহরাব খিলান clip (Section 5.4) */
+  .arch-clip {
+    clip-path: url(#mihrab-arch);
+  }
+
+  /* বড় display হেডলাইন — বাংলায় italic নয়, English-এ Cormorant italic */
+  .display-line {
+    font-size: var(--fs-display);
+    line-height: 1.12;
+  }
+
+  html[lang='en'] .display-line {
+    font-family: theme('fontFamily.display');
+    font-style: italic;
+    letter-spacing: -0.02em;
+  }
+
+  /* English-only uppercase eyebrow treatment (Section 5.2) */
+  html[lang='en'] .eyebrow-text {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-family: theme('fontFamily.ui');
+  }
+}
+
+/* Section 13 — reduced motion: সব transform/animation বন্ধ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "pledges": "Pledges",
+    "work": "Work",
+    "ward": "Ward",
+    "support": "Support",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close",
+    "openMenu": "Open menu",
+    "skip": "Skip to main content"
+  },
+  "actions": {
+    "volunteer": "Become a volunteer",
+    "seePledges": "See the pledges",
+    "allPledges": "See all pledges",
+    "readAbout": "Read the full story",
+    "seeWork": "Work & contribution",
+    "standWithUs": "Stand with us to make this happen",
+    "whatsapp": "Message on WhatsApp",
+    "whatsappSoon": "WhatsApp — coming soon",
+    "backHome": "Back to home"
+  },
+  "header": {
+    "wardChip": "Ward 54 · Dhaka North",
+    "logoAlt": "Monogram",
+    "langToggle": "Change language",
+    "bnLabel": "বাং",
+    "enLabel": "EN"
+  },
+  "footer": {
+    "quickNav": "Quick links",
+    "reach": "Reach us",
+    "campOffice": "Campaign office",
+    "symbolChip": "Election symbol: to be assigned",
+    "socialSoon": "Facebook / YouTube — pages opening soon",
+    "rights": "All rights reserved.",
+    "poweredBy": "Powered by Databrandix · Insight. Decision. Develop."
+  },
+  "home": {
+    "badgeTop": "Vote",
+    "badgeBottom": "Ward 54",
+    "pledgesEyebrow": "My pledges",
+    "pledgesTitle": "The work that comes first",
+    "workEyebrow": "Work & contribution",
+    "workTitle": "Not in words — in work",
+    "ctaTitle": "One vote of yours — the beginning of a change.",
+    "ctaSub": "In campaigning, in volunteering, or in a single word to a neighbour — help however you can."
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "One of your own",
+    "storyHeading": "The story",
+    "glanceHeading": "At a glance",
+    "familyHeading": "Family",
+    "educationHeading": "Education & career",
+    "businessHeading": "Currently chairman of",
+    "politicsHeading": "Political identity",
+    "whyHeading": "Why I'm standing",
+    "fields": {
+      "name": "Full name",
+      "nickname": "Known as",
+      "dob": "Born",
+      "religion": "Religion",
+      "area": "Area",
+      "profession": "Profession"
+    }
+  },
+  "pledges": {
+    "eyebrow": "My pledges",
+    "title": "Eleven promises, one goal",
+    "intro": "Not grand slogans — but solving, one by one, the problems people face every day.",
+    "priorityHeading": "Priority areas"
+  },
+  "work": {
+    "eyebrow": "Work",
+    "title": "Not in words — in work",
+    "intro": "What has already been done, long before any promise — witnessed by the people themselves.",
+    "socialHeading": "Social work",
+    "crisisHeading": "In times of crisis",
+    "affiliationsHeading": "Affiliations",
+    "recognitionHeading": "Recognition"
+  },
+  "ward": {
+    "eyebrow": "Ward 54",
+    "title": "Our ward, our responsibility",
+    "mohollaHeading": "Neighbourhoods",
+    "mohollaNote": "A few spellings are still being confirmed.",
+    "glanceHeading": "Ward at a glance",
+    "challengesHeading": "Challenges → our focus",
+    "problemLabel": "Challenge",
+    "focusLabel": "Our focus"
+  },
+  "support": {
+    "eyebrow": "Support & media",
+    "title": "The trust of people",
+    "quotesHeading": "Words he lives by",
+    "voicesHeading": "Voices from the ward",
+    "mediaHeading": "In the media",
+    "mediaNote": "Outlet names only — no links are claimed."
+  },
+  "contact": {
+    "title": "Get involved",
+    "intro": "This change is not one man's work — it moves forward when you join in.",
+    "formHeading": "Volunteer form",
+    "directHeading": "Reach directly",
+    "campOfficeHeading": "Campaign office",
+    "socialHeading": "Social",
+    "socialSoon": "Facebook / YouTube — pages opening soon"
+  },
+  "form": {
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "mobile": "Mobile",
+    "mobilePlaceholder": "01XXXXXXXXX",
+    "area": "Area / neighbourhood",
+    "areaPlaceholder": "Select one",
+    "help": "How you'd like to help",
+    "helpOptions": {
+      "campaign": "Campaigning",
+      "volunteer": "Volunteering",
+      "info": "Spreading the word",
+      "event": "Events"
+    },
+    "message": "Message",
+    "messageOptional": "optional",
+    "messagePlaceholder": "Anything you'd like to say",
+    "required": "required",
+    "submit": "Send",
+    "sending": "Sending…",
+    "success": "Thank you — we'll reach out to you soon.",
+    "error": "Couldn't send. Check your number and try again.",
+    "nameRequired": "Please enter your name.",
+    "mobileInvalid": "Enter a valid 11-digit mobile number (e.g. 01712345678)."
+  },
+  "meta": {
+    "home": {
+      "title": "Md. Shafiqul Islam — Councilor Candidate, Ward 54 | Dhaka North",
+      "description": "A son of this soil in Turag, one of your own — standing beside you to build a fair, transparent and drug-free Ward 54."
+    },
+    "about": {
+      "title": "About — Md. Shafiqul Islam",
+      "description": "Born on the soil of Turag and raised among its people. Business, service, and standing by those in need."
+    },
+    "pledges": {
+      "title": "Pledges — eleven promises, one goal",
+      "description": "Roads, a drug-free ward, education, healthcare and livelihoods — eleven pledges for Ward 54."
+    },
+    "work": {
+      "title": "Work & contribution — Md. Shafiqul Islam",
+      "description": "Social work, disaster relief and neighbourhood development, over many years."
+    },
+    "ward": {
+      "title": "Ward 54 — our neighbourhood",
+      "description": "The neighbourhoods of Turag, the challenges they face, and what we intend to do."
+    },
+    "support": {
+      "title": "Support & media — the trust of people",
+      "description": "Voices from the ward, words he lives by, and media coverage."
+    },
+    "contact": {
+      "title": "Contact & volunteer — Ward 54",
+      "description": "Join as a volunteer, or reach the campaign directly."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "There is nothing at this address. Head back to the home page."
+  }
+}
