@@ -40,7 +40,15 @@ const config: Config = {
         bn: ['Abu Sayed', 'var(--font-bn-fallback)', 'Noto Serif Bengali', 'Hind Siliguri', 'serif'],
         display: ['var(--font-cormorant)', 'Georgia', 'serif'],
         body: ['var(--font-eb)', 'Georgia', 'serif'],
-        ui: ['var(--font-ui)', 'system-ui', 'sans-serif'],
+        // Inter-এ বাংলা গ্লিফ নেই — তাই বাংলা UI টেক্সট যেন ব্যবহারকারীর OS-এর
+        // এলোমেলো ফন্টে না পড়ে, Abu Sayed-এ পড়ে (Latin থাকে Inter-এ)।
+        ui: [
+          'var(--font-ui)',
+          'Abu Sayed',
+          'var(--font-bn-fallback)',
+          'system-ui',
+          'sans-serif',
+        ],
       },
       fontSize: {
         display: ['var(--fs-display)', { lineHeight: '1.12' }],

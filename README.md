@@ -33,7 +33,6 @@ Next.js 15 (App Router) · TypeScript · Tailwind CSS · next-intl · lucide-rea
 
 | জিনিস | কোথায় বসবে | না থাকলে এখন কী হয় |
 |---|---|---|
-| **Abu Sayed ফন্ট** | `public/fonts/AbuSayed.woff2` | Noto Serif Bengali fallback |
 | **প্রার্থীর hero ছবি** | `public/img/hero-candidate.png` | খিলানের ভেতরে নিরপেক্ষ সবুজ placeholder |
 | **পরিচিতি পেজের ছবি** | `public/img/candidate-about.jpg` | ঐ একই placeholder |
 | **WhatsApp নম্বর** | `.env` → `NEXT_PUBLIC_WHATSAPP` | বাটন disabled + "শীঘ্রই" |
@@ -43,9 +42,34 @@ Next.js 15 (App Router) · TypeScript · Tailwind CSS · next-intl · lucide-rea
 | **লোগো/মনোগ্রাম** | `components/layout/Monogram.tsx` | খিলানের ভেতরে "শ" |
 | **নির্বাচনী মার্কা** | Hero badge + Footer chip | নিরপেক্ষ star motif + "শীঘ্রই বরাদ্দ হবে" |
 
-আরও: **OG কার্ড** (`app/[locale]/opengraph-image.tsx`) এখন English-এ — বাংলা
-গ্লিফ আঁকতে embed করার মতো ফন্ট ফাইল লাগে, Abu Sayed এলে সেখানে `fonts` অপশন
-দিয়ে বাংলা করা যাবে।
+## ফন্ট
+
+`public/fonts/` — **Codepotro Abu Sayed** (SIL Open Font License, `OFL.txt` সাথে):
+
+- `AbuSayed.woff2` (৫১ KB) — ব্রাউজারে এটাই লোড হয়, `globals.css`-এর `@font-face`
+- `AbuSayed.ttf` (১৫৩ KB) — সোর্স ফাইল, ওয়েবে যায় না
+
+TTF থেকে woff2 বানানো হয়েছে `wawoff2` দিয়ে (একবারের কাজ, dependency হিসেবে
+রাখা হয়নি)। ফন্ট আপডেট করলে:
+
+```bash
+npm i --no-save wawoff2
+node -e "const{compress}=require('wawoff2'),fs=require('fs');compress(fs.readFileSync('public/fonts/AbuSayed.ttf')).then(b=>fs.writeFileSync('public/fonts/AbuSayed.woff2',b))"
+```
+
+Inter-এ বাংলা গ্লিফ নেই, তাই `font-ui` স্ট্যাকে Inter-এর পরেই Abu Sayed —
+বাটন/ফর্ম লেবেলের বাংলাও ব্র্যান্ড ফন্টে পড়ে, ব্যবহারকারীর OS ফন্টে নয়।
+
+## OG কার্ড কেন English-এ
+
+`app/[locale]/opengraph-image.tsx` দুই locale-এই English লেখা দেখায় —
+ইচ্ছাকৃত। next/og-এর রেন্ডারার (Satori) Indic script shaping করে না; Abu Sayed
+embed করেও বাংলা ভেঙে আসে ("মোঃ" → "ম্ ঃ", ি-কার এদিক-ওদিক বসে)। ভাঙা বাংলার
+চেয়ে পরিষ্কার English ভালো।
+
+বাংলা OG চাইলে ডিজাইন করা আর্টওয়ার্ক (Canva/Figma থেকে ১২০০×৬৩০ PNG)
+`public/og/`-তে বসিয়ে এই ফাইলটা সরিয়ে দিন, আর `lib/metadata.ts`-এ
+`openGraph.images`-এ ওই পাথ দিন।
 
 ## প্রকাশের আগে যাচাই করানোর তালিকা
 
