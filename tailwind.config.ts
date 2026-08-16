@@ -34,18 +34,24 @@ const config: Config = {
         gold: 'var(--gold)',
       },
       fontFamily: {
-        // 'Abu Sayed' globals.css-এ @font-face দিয়ে ঘোষণা করা — ফাইল এলে
-        // public/fonts/AbuSayed.woff2 বসালেই আপনা থেকে কাজ করবে, নাহলে
-        // Noto Serif Bengali fallback (Section 6)।
-        bn: ['Abu Sayed', 'var(--font-bn-fallback)', 'Noto Serif Bengali', 'Hind Siliguri', 'serif'],
+        // বাংলা বডি — Noto Serif Bengali (ছোট সাইজে পড়তে আরাম)।
+        bn: ['var(--font-bn-fallback)', 'Noto Serif Bengali', 'Hind Siliguri', 'serif'],
+        // বাংলা হেডিং/display — Abu Sayed। globals.css-এর @font-face থেকে আসে;
+        // ফাইল না থাকলে আপনা থেকে Noto-তে নেমে যায়।
+        'bn-display': [
+          'Abu Sayed',
+          'var(--font-bn-fallback)',
+          'Noto Serif Bengali',
+          'serif',
+        ],
         display: ['var(--font-cormorant)', 'Georgia', 'serif'],
         body: ['var(--font-eb)', 'Georgia', 'serif'],
         // Inter-এ বাংলা গ্লিফ নেই — তাই বাংলা UI টেক্সট যেন ব্যবহারকারীর OS-এর
-        // এলোমেলো ফন্টে না পড়ে, Abu Sayed-এ পড়ে (Latin থাকে Inter-এ)।
+        // এলোমেলো ফন্টে না পড়ে, বডির ফন্টেই পড়ে (Latin থাকে Inter-এ)।
         ui: [
           'var(--font-ui)',
-          'Abu Sayed',
           'var(--font-bn-fallback)',
+          'Noto Serif Bengali',
           'system-ui',
           'sans-serif',
         ],

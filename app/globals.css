@@ -87,10 +87,18 @@
     text-rendering: optimizeLegibility;
   }
 
-  /* বাংলা locale: heading + body দুটোতেই বাংলা ফন্ট, generous leading */
+  /* বাংলা locale: বডি Noto Serif Bengali, generous leading */
   html[lang='bn'] body {
     font-family: theme('fontFamily.bn');
     line-height: 1.85;
+  }
+
+  /* হেডিং-এ Abu Sayed — display face, বডিতে নয় */
+  html[lang='bn'] h1,
+  html[lang='bn'] h2,
+  html[lang='bn'] h3,
+  html[lang='bn'] h4 {
+    font-family: theme('fontFamily.bn-display');
   }
 
   html[lang='en'] body {
@@ -150,6 +158,12 @@
   .display-line {
     font-size: var(--fs-display);
     line-height: 1.12;
+  }
+
+  /* হেডিং নয় কিন্তু display টাইপ (যেমন স্লোগান ব্যান্ড) */
+  html[lang='bn'] .display-line,
+  html[lang='bn'] .bn-display {
+    font-family: theme('fontFamily.bn-display');
   }
 
   html[lang='en'] .display-line {

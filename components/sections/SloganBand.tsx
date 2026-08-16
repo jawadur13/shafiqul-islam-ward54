@@ -11,7 +11,7 @@ export function SloganBand() {
   return (
     <section className="bg-green-800 py-14 text-on-dark sm:py-16">
       <Container className="text-center">
-        <p className="mx-auto max-w-[24ch] text-h2 text-on-dark sm:max-w-[34ch]">
+        <p className="bn-display mx-auto max-w-[24ch] text-h2 text-on-dark sm:max-w-[34ch]">
           {candidate.mainSlogan[locale]}
         </p>
         <Divider centered className="my-7" />

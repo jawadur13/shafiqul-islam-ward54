@@ -57,8 +57,13 @@ npm i --no-save wawoff2
 node -e "const{compress}=require('wawoff2'),fs=require('fs');compress(fs.readFileSync('public/fonts/AbuSayed.ttf')).then(b=>fs.writeFileSync('public/fonts/AbuSayed.woff2',b))"
 ```
 
-Inter-এ বাংলা গ্লিফ নেই, তাই `font-ui` স্ট্যাকে Inter-এর পরেই Abu Sayed —
-বাটন/ফর্ম লেবেলের বাংলাও ব্র্যান্ড ফন্টে পড়ে, ব্যবহারকারীর OS ফন্টে নয়।
+**কোথায় কোন ফন্ট:** Abu Sayed একটা display face — তাই শুধু হেডিং-এ
+(`font-bn-display`: h1–h4, hero display line, স্লোগান ব্যান্ড, মনোগ্রাম)।
+বডি, নেভিগেশন, বাটন, ফর্ম লেবেল — সব **Noto Serif Bengali** (`font-bn`),
+ছোট সাইজে পড়তে আরাম।
+
+Inter-এ বাংলা গ্লিফ নেই, তাই `font-ui` স্ট্যাকে Inter-এর পরেই Noto Serif
+Bengali — বাংলা UI টেক্সট ব্যবহারকারীর OS-এর এলোমেলো ফন্টে পড়ে না।
 
 ## OG কার্ড কেন English-এ
 

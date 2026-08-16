@@ -17,8 +17,8 @@ export function Monogram({ className }: { className?: string }) {
       <span className="absolute inset-0 text-[var(--gold)]">
         <ArchMark />
       </span>
-      {/* English locale-এও বাংলা ফন্টেই রেন্ডার হবে, নাহলে গ্লিফ কাটা পড়ে */}
-      <span className="relative mt-1 font-bn text-lg leading-none text-on-dark">
+      {/* মনোগ্রাম display টাইপ; English locale-এও বাংলা ফন্টেই থাকবে */}
+      <span className="relative mt-1 font-bn-display text-lg leading-none text-on-dark">
         শ
       </span>
     </span>
