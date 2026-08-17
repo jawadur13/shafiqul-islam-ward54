@@ -6,7 +6,7 @@ import { mohollas } from '@/content/ward';
 import type { Locale } from '@/content/types';
 
 /**
- * Section 8.5a — মহল্লা তালিকা, green section।
+ * Section 8.5a — মহল্লা তালিকা, ivory section।
  * আসল geo-map নেই, তাই পাশের আউটলাইনটা নিছক আলংকারিক — ভৌগোলিক দাবি নয়।
  */
 export function WardMap() {
@@ -14,19 +14,21 @@ export function WardMap() {
   const t = useTranslations('ward');
 
   return (
-    <section className="bg-green-800 py-section-y text-on-dark">
+    <section className="bg-ivory py-section-y text-ink">
       <Container className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-        <div className="mx-auto w-full max-w-[280px] text-[var(--gold)] opacity-70">
+        {/* ivory-র উপরে gold প্রায় মিলিয়ে যায় (≈1.9:1), তাই সবুজে — আলংকারিক
+            বলে opacity কমানো, যাতে হেডিং-এর সাথে প্রতিযোগিতা না করে। */}
+        <div className="mx-auto w-full max-w-[280px] text-green-800 opacity-45">
           <DecorativeOutline />
         </div>
 
         <div>
-          <Eyebrow onDark>{t('eyebrow')}</Eyebrow>
-          <h2 className="mt-4 text-h2 text-on-dark">{t('mohollaHeading')}</h2>
+          <Eyebrow>{t('eyebrow')}</Eyebrow>
+          <h2 className="mt-4 text-h2 text-green-800">{t('mohollaHeading')}</h2>
           <ul className="mt-8 flex flex-wrap gap-2.5">
             {mohollas.map((moholla) => (
               <li key={moholla.en}>
-                <Badge tone="onDark">
+                <Badge tone="ink">
                   {moholla[locale]}
                   {moholla.partial && (
                     <span className="opacity-70">({t('partial')})</span>
@@ -35,9 +37,7 @@ export function WardMap() {
               </li>
             ))}
           </ul>
-          <p className="mt-6 font-ui text-xs text-on-dark-muted">
-            {t('mohollaNote')}
-          </p>
+          <p className="mt-6 font-ui text-xs text-muted">{t('mohollaNote')}</p>
         </div>
       </Container>
     </section>

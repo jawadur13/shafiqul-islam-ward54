@@ -36,13 +36,13 @@ export default async function WardPage({
       <WardMap />
 
       {/* (b) এক নজরে এলাকা */}
-      <Section tone="ivory">
+      <Section tone="white">
         <Container>
           <SectionHeading title={t('glanceHeading')} />
           <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {wardFacts.map((fact, index) => (
               <Reveal as="li" key={fact.label.en} delay={(index % 4) * 60}>
-                <Card className="h-full">
+                <Card tone="ivory" className="h-full">
                   <p className="font-ui text-xs uppercase tracking-[0.12em] text-muted">
                     {fact.label[locale]}
                   </p>
@@ -57,7 +57,7 @@ export default async function WardPage({
       </Section>
 
       {/* (c) সমস্যা → লক্ষ্য */}
-      <Section tone="white">
+      <Section tone="ivory">
         <Container>
           <SectionHeading title={t('challengesHeading')} />
 
