@@ -55,7 +55,7 @@ export function PageHero({
         fill
         priority
         sizes="100vw"
-        className="object-cover"
+        className="hero-zoom object-cover"
         style={{ objectPosition: focal, filter: 'saturate(0.55)' }}
       />
 

@@ -148,6 +148,13 @@
     transform: none;
   }
 
+  /* Section 8.2 — পেজ ব্যানারের ধীর zoom in/out।
+     transform-only, তাই GPU-তে চলে; scrim/লেখা স্থির থাকে, শুধু ছবি নড়ে।
+     alternate + ease-in-out — দুই প্রান্তেই থেমে ঘোরে, ঝাঁকুনি ছাড়া। */
+  .hero-zoom {
+    animation: hero-zoom 28s ease-in-out infinite alternate;
+    will-change: transform;
+  }
   /* Signature — মেহরাব খিলান clip (Section 5.4) */
   .arch-clip {
     clip-path: url(#mihrab-arch);
@@ -179,6 +186,14 @@
   }
 }
 
+@keyframes hero-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
 /* Section 13 — reduced motion: সব transform/animation বন্ধ */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -196,6 +211,11 @@
 
   .reveal {
     opacity: 1;
+    transform: none;
+  }
+
+  .hero-zoom {
+    animation: none;
     transform: none;
   }
 }
