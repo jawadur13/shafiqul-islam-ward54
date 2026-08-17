@@ -93,11 +93,10 @@
     line-height: 1.85;
   }
 
-  /* হেডিং-এ Abu Sayed — display face, বডিতে নয় */
+  /* Abu Sayed শুধু বড় হেডিং-এ (h1/h2)। কার্ডের ছোট হেডিং (h3/h4) বডির
+     ফন্টেই থাকে — display face ছোট সাইজে ভারী দেখায়। */
   html[lang='bn'] h1,
-  html[lang='bn'] h2,
-  html[lang='bn'] h3,
-  html[lang='bn'] h4 {
+  html[lang='bn'] h2 {
     font-family: theme('fontFamily.bn-display');
   }
 
