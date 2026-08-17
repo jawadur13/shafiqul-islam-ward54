@@ -23,8 +23,8 @@ export const candidate = {
   profession: { bn: 'ব্যবসায়ী', en: 'Businessman' },
   spouse: { bn: 'ফরিদা ইয়াসমিন', en: 'Farida Yasmin' },
   campOffice: {
-    bn: 'ওয়ালটন সার্কেল, খামারপাড়া মেইন রোড, উত্তরা',
-    en: 'Walton Circle, Khamar Para Main Rd, Uttara',
+    bn: 'ওয়ালটন সার্কেল, কামারপাড়া মেইন রোড, উত্তরা',
+    en: 'Walton Circle, Kamarpara Main Road, Uttara',
   },
 
   mainSlogan: {
