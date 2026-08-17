@@ -3,6 +3,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import { Container } from '@/components/layout/Container';
 import { ButtonLink } from '@/components/ui/Button';
 import { CandidatePortrait } from '@/components/ui/CandidatePortrait';
+import { PartySymbol } from '@/components/ui/PartySymbol';
 import { candidate } from '@/content/candidate';
 import type { Locale } from '@/content/types';
 
@@ -40,6 +41,12 @@ export async function Hero() {
         </div>
 
         <div className="order-2 lg:order-1">
+          {/* দলীয় প্রতীক — দাঁড়িপাল্লা */}
+          <PartySymbol
+            label={`${t('partySymbol')} — ${candidate.party[locale]}`}
+            className="mb-7 w-16 text-green-800 sm:w-20"
+          />
+
           <h1 className="display-line whitespace-pre-line text-balance text-maroon">
             {candidate.heroLine[locale]}
           </h1>

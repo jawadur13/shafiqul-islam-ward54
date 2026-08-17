@@ -39,6 +39,7 @@
     "rights": "All rights reserved."
   },
   "home": {
+    "partySymbol": "Party symbol",
     "badgeTop": "Vote",
     "badgeBottom": "Ward 54",
     "pledgesEyebrow": "My pledges",
