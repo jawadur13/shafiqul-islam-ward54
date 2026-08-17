@@ -6,6 +6,7 @@ import { CandidatePortrait } from '@/components/ui/CandidatePortrait';
 import { PartySymbol } from '@/components/ui/PartySymbol';
 import { candidate } from '@/content/candidate';
 import type { Locale } from '@/content/types';
+import { cn } from '@/lib/utils';
 
 /** Section 8.1a — বাঁয়ে display হেডলাইন, ডানে খিলান-ফ্রেমে ছবি, ডান-উপরে badge। */
 export async function Hero() {
@@ -42,10 +43,18 @@ export async function Hero() {
         </div>
 
         <div className="order-2 lg:order-1">
-          {/* দলীয় প্রতীক — দাঁড়িপাল্লা */}
+          {/* দলীয় প্রতীক — হেডলাইনের প্রথম লাইনের মাঝ বরাবর।
+              প্রথম লাইনের কেন্দ্র breakpoint ভেদে সরে যায় (কলাম চওড়া হলে
+              লাইনটা কলামের বাঁ দিকে পড়ে), তাই মেপে নেওয়া মান বসানো।
+              -translate-x-1/2 প্রতীকের নিজের কেন্দ্রকে ওই বিন্দুতে আনে। */}
           <PartySymbol
             label={`${t('partySymbol')} — ${candidate.party[locale]}`}
-            className="mx-auto mb-8 w-28 text-green-800 sm:w-36"
+            className={cn(
+              'mb-8 w-28 -translate-x-1/2 text-green-800 sm:w-36',
+              locale === 'bn'
+                ? 'ml-[38%] sm:ml-[24%] md:ml-[21%] lg:ml-[39%]'
+                : 'ml-[34%]'
+            )}
           />
 
           <h1 className="display-line whitespace-pre-line text-balance text-maroon">
