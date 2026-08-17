@@ -28,6 +28,7 @@ export async function Hero() {
             <CandidatePortrait
               alt={`${candidate.name[locale]} — ${candidate.post[locale]}`}
               priority
+              withMap
             />
             <VoteBadge
               top={t('badgeTop')}
