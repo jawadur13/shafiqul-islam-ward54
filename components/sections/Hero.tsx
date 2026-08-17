@@ -23,26 +23,8 @@ export async function Hero() {
       />
 
       <Container className="relative grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
-        {/* মোবাইলে ছবি আগে (Section 13) */}
-        <div className="order-1 lg:order-2">
-          <div className="relative mx-auto w-full max-w-[290px] sm:max-w-[360px]">
-            <CandidatePortrait
-              alt={`${candidate.name[locale]} — ${candidate.post[locale]}`}
-              priority
-              withMap
-            />
-            <VoteBadge
-              top={t('badgeTop')}
-              bottom={t('badgeBottom')}
-              className="absolute -right-2 -top-4 sm:-right-6 sm:-top-6"
-            />
-            <p className="mt-5 text-center font-ui text-sm text-muted">
-              {candidate.name[locale]} · {candidate.post[locale]}
-            </p>
-          </div>
-        </div>
-
-        <div className="order-2 lg:order-1">
+        {/* মোবাইলে লেখা আগে, ছবি নিচে; lg-তে লেখা বাঁয়ে, ছবি ডানে */}
+        <div>
           {/* দলীয় প্রতীক — হেডলাইনের প্রথম লাইনের মাঝ বরাবর।
               প্রথম লাইনের কেন্দ্র breakpoint ভেদে সরে যায় (কলাম চওড়া হলে
               লাইনটা কলামের বাঁ দিকে পড়ে), তাই মেপে নেওয়া মান বসানো।
@@ -50,7 +32,7 @@ export async function Hero() {
           <PartySymbol
             label={`${t('partySymbol')} — ${candidate.party[locale]}`}
             className={cn(
-              'mb-8 w-28 -translate-x-1/2 text-green-800 sm:w-36',
+              'mb-6 w-16 -translate-x-1/2 text-green-800 sm:mb-8 sm:w-24 lg:w-36',
               locale === 'bn'
                 ? 'ml-[38%] sm:ml-[24%] md:ml-[21%] lg:ml-[39%]'
                 : 'ml-[34%]'
@@ -72,6 +54,24 @@ export async function Hero() {
             <ButtonLink href="/ongikar" variant="secondary" size="lg">
               {tActions('seePledges')}
             </ButtonLink>
+          </div>
+        </div>
+
+        <div>
+          <div className="relative mx-auto w-full max-w-[290px] sm:max-w-[360px]">
+            <CandidatePortrait
+              alt={`${candidate.name[locale]} — ${candidate.post[locale]}`}
+              priority
+              withMap
+            />
+            <VoteBadge
+              top={t('badgeTop')}
+              bottom={t('badgeBottom')}
+              className="absolute -right-2 -top-4 sm:-right-6 sm:-top-6"
+            />
+            <p className="mt-5 text-center font-ui text-sm text-muted">
+              {candidate.name[locale]} · {candidate.post[locale]}
+            </p>
           </div>
         </div>
       </Container>
