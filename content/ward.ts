@@ -1,20 +1,21 @@
 import type { L } from './types';
 
 /**
- * Section 8.5a — মহল্লা তালিকা।
- * কয়েকটা বানান হাতের লেখা থেকে আনুমানিক — publish-এর আগে প্রার্থীকে দিয়ে confirm করাও।
+ * Section 8.5a — মহল্লা তালিকা (প্রার্থীর পক্ষ থেকে confirm করা)।
+ * `partial` = মহল্লার একাংশ ওয়ার্ড ৫৪-এর ভেতরে পড়ে।
  */
-export const mohollas: L[] = [
-  { bn: 'ঢোর', en: 'Dhor' },
-  { bn: 'আষ্টিয়া', en: 'Ashtia' },
-  { bn: 'রাজাবাড়ি', en: 'Rajabari' },
-  { bn: 'নয়নচালা', en: 'Noyonchala' },
-  { bn: 'বাটুলিয়া', en: 'Batulia' },
-  { bn: 'রোশাদিয়া', en: 'Roshadia' },
-  { bn: 'কামারপাড়া', en: 'Kamarpara' },
-  { bn: 'কুমিল্লারটেক', en: 'Kumillartek' },
-  { bn: 'বুমনাদটেক', en: 'Bumnadtek' },
-  { bn: 'সুমনেরটেক', en: 'Sumonertek' },
+export type Moholla = L & { partial?: true };
+
+export const mohollas: Moholla[] = [
+  { bn: 'রাজাবাড়ী', en: 'Rajabari' },
+  { bn: 'ভাটুলিয়া', en: 'Bhatulia' },
+  { bn: 'গ্রাম ভাটুলিয়া', en: 'Gram Bhatulia' },
+  { bn: 'কালিয়ারটেক', en: 'Kaliartek' },
+  { bn: 'খায়েরটেক', en: 'Khairtek' },
+  { bn: 'নয়ানীচালা', en: 'Nayanichala' },
+  { bn: 'আশুতিয়া', en: 'Ashutia' },
+  { bn: 'রোশাদিয়া', en: 'Roshadia', partial: true },
+  { bn: 'ধউর', en: 'Dhaur', partial: true },
 ];
 
 /**
@@ -36,7 +37,7 @@ export const wardFacts: { label: L; value: L }[] = [
   },
   {
     label: { bn: 'মহল্লা', en: 'Neighbourhoods' },
-    value: { bn: '১০টি', en: 'Ten' },
+    value: { bn: '৯টি', en: 'Nine' },
   },
 ];
 

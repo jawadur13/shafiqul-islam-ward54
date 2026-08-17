@@ -26,7 +26,12 @@ export function WardMap() {
           <ul className="mt-8 flex flex-wrap gap-2.5">
             {mohollas.map((moholla) => (
               <li key={moholla.en}>
-                <Badge tone="onDark">{moholla[locale]}</Badge>
+                <Badge tone="onDark">
+                  {moholla[locale]}
+                  {moholla.partial && (
+                    <span className="opacity-70">({t('partial')})</span>
+                  )}
+                </Badge>
               </li>
             ))}
           </ul>
