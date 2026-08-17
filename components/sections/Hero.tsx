@@ -32,7 +32,7 @@ export async function Hero() {
           <PartySymbol
             label={`${t('partySymbol')} — ${candidate.party[locale]}`}
             className={cn(
-              'mb-6 w-16 -translate-x-1/2 text-green-800 sm:mb-8 sm:w-24 lg:w-36',
+              'mb-5 w-12 -translate-x-1/2 text-green-800 sm:mb-8 sm:w-24 lg:w-36',
               locale === 'bn'
                 ? 'ml-[38%] sm:ml-[24%] md:ml-[21%] lg:ml-[39%]'
                 : 'ml-[34%]'

@@ -6,6 +6,9 @@ import { cn } from '@/lib/utils';
  *
  * ⚠️ এটা দলীয় প্রতীক — নির্বাচনী মার্কা নয়। ব্যালটের মার্কা বরাদ্দ হলে
  * hero badge আর footer chip-এর `[TBD]` placeholder আলাদাভাবে বদলাতে হবে।
+ *
+ * প্রস্থ caller ঠিক করে — এখানে `w-full` বসানো নেই, নাহলে caller-এর
+ * `w-12`/`sm:w-24` ধরনের ক্লাস Tailwind-এর CSS ক্রমে হেরে যেত।
  */
 export function PartySymbol({
   label,
@@ -19,7 +22,7 @@ export function PartySymbol({
       viewBox="0 0 200 200"
       role="img"
       aria-label={label}
-      className={cn('h-auto w-full', className)}
+      className={cn('h-auto max-w-full', className)}
       fill="currentColor"
     >
       {/* খুঁটি — উপরে সরু ডগা */}
