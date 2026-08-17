@@ -25,11 +25,11 @@ export const mohollas: Moholla[] = [
 export const wardFacts: { label: L; value: L }[] = [
   {
     label: { bn: 'আনুমানিক ভোটার', en: 'Approx. voters' },
-    value: { bn: '~২৭,০০০', en: '~27,000' },
+    value: { bn: '~৩৫,০০০', en: '~35,000' },
   },
   {
     label: { bn: 'আনুমানিক জনসংখ্যা', en: 'Approx. population' },
-    value: { bn: '~৫৫,০০০', en: '~55,000' },
+    value: { bn: '~৭০,০০০', en: '~70,000' },
   },
   {
     label: { bn: 'সিটি কর্পোরেশন', en: 'City corporation' },
