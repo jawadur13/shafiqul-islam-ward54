@@ -31,10 +31,6 @@ export const candidate = {
     bn: 'মাদককে না বলুন — সুন্দর ভবিষ্যতের জন্য এগিয়ে চলুন।',
     en: 'Say no to drugs — walk toward a brighter future.',
   },
-  sloganSub: {
-    bn: 'ভালো কাজ করতে না পারলে, খারাপটাও করব না।',
-    en: 'If I cannot do great good, I will do no harm.',
-  },
   heroLine: {
     bn: 'আল্লাহর আইন চাই,\nসৎ লোকের শাসন চাই',
     en: 'We seek the rule of the honest,\nunder the justice of faith',

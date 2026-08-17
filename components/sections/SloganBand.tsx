@@ -14,10 +14,7 @@ export function SloganBand() {
         <p className="bn-display mx-auto max-w-[24ch] text-h2 text-on-dark sm:max-w-[34ch]">
           {candidate.mainSlogan[locale]}
         </p>
-        <Divider centered className="my-7" />
-        <p className="text-lg italic text-on-dark-muted">
-          “{candidate.sloganSub[locale]}”
-        </p>
+        <Divider centered className="mt-8" />
       </Container>
     </section>
   );
