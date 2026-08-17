@@ -44,7 +44,7 @@ export async function Hero() {
           {/* দলীয় প্রতীক — দাঁড়িপাল্লা */}
           <PartySymbol
             label={`${t('partySymbol')} — ${candidate.party[locale]}`}
-            className="mb-7 w-16 text-green-800 sm:w-20"
+            className="mx-auto mb-8 w-28 text-green-800 sm:w-36"
           />
 
           <h1 className="display-line whitespace-pre-line text-balance text-maroon">
