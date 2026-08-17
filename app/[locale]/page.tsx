@@ -53,7 +53,7 @@ export default async function HomePage({
             <PledgeGrid limit={6} />
           </div>
           <div className="mt-10">
-            <ButtonLink href="/ongikar" variant="ghost">
+            <ButtonLink href="/ongikar" variant="secondary">
               {tActions('allPledges')}
               <ArrowRight size={16} aria-hidden="true" />
             </ButtonLink>
@@ -69,7 +69,7 @@ export default async function HomePage({
             <WorkCards items={workHighlights} />
           </div>
           <div className="mt-10">
-            <ButtonLink href="/kaj" variant="ghost">
+            <ButtonLink href="/kaj" variant="secondary">
               {tActions('seeWork')}
               <ArrowRight size={16} aria-hidden="true" />
             </ButtonLink>

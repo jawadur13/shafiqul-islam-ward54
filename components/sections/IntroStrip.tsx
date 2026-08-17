@@ -22,7 +22,7 @@ export function IntroStrip() {
             {candidate.intro[locale]}
           </p>
           <div className="mt-8">
-            <ButtonLink href="/porichiti" variant="ghost">
+            <ButtonLink href="/porichiti" variant="secondary">
               {tActions('readAbout')}
               <ArrowRight size={16} aria-hidden="true" />
             </ButtonLink>
