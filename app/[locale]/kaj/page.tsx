@@ -56,7 +56,7 @@ export default async function WorkPage({
             className={cn(
               'mt-12',
               photos.length > 0
-                ? 'grid gap-10 lg:grid-cols-[1fr_420px] lg:items-start lg:gap-14'
+                ? 'grid gap-10 lg:grid-cols-[1fr_420px] lg:gap-14'
                 : 'max-w-narrow'
             )}
           >
