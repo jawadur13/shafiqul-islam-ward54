@@ -93,11 +93,10 @@ export function Footer() {
 
         <Divider className="mt-12" />
 
-        <div className="mt-6 flex flex-col gap-2 text-xs text-on-dark-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-6 text-xs text-on-dark-muted">
           <p>
             © {year} {candidate.name[locale]}. {tFooter('rights')}
           </p>
-          <p>{tFooter('poweredBy')}</p>
         </div>
       </Container>
     </footer>
