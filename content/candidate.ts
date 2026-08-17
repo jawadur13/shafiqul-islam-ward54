@@ -61,7 +61,7 @@ export const candidate = {
   ] satisfies L[],
 
   personalQuote: {
-    bn: 'ছোটবেলায় ক্লাস পাঁচ থেকে নয় পর্যন্ত হাফপ্যান্ট পরেই স্কুলে গেছি। একটা লাল শার্ট ছিল, সেটা পরেই ঈদের নামাজ পড়তাম। সেই দিনগুলো আমি ভুলিনি — আজ পাঞ্জাবি পরি ঠিকই, কিন্তু গায়ে এখনো সেই সাধারণ মানুষের দাগটা লেগে আছে।',
+    bn: 'ছোটবেলায় ক্লাস ফাইভ থেকে নাইন পর্যন্ত হাফপ্যান্ট পরেই স্কুলে গেছি। একটা লাল শার্ট ছিল, সেটা পরেই ঈদের নামাজ পড়তাম। সেই দিনগুলো আমি ভুলিনি — আজ পাঞ্জাবি পরি ঠিকই, কিন্তু গায়ে এখনো সেই সাধারণ মানুষের দাগটা লেগে আছে।',
     en: 'As a boy, from class five to class nine, I went to school in short pants. I had one red shirt, and I wore it to Eid prayers. I have never forgotten those days — I wear a panjabi now, but the mark of that ordinary boy is still on me.',
   },
 
