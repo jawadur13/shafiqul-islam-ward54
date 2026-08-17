@@ -33,7 +33,7 @@ export const candidate = {
   },
   heroLine: {
     bn: 'আল্লাহর আইন চাই,\nসৎ লোকের শাসন চাই',
-    en: 'We seek the rule of the honest,\nunder the justice of faith',
+    en: '“We seek the rule of the Almighty,\nand the leadership of the righteous.',
   },
   heroSub: {
     bn: 'এই তুরাগেরই সন্তান, আপনাদেরই একজন। একটি ন্যায্য, স্বচ্ছ ও মাদকমুক্ত ওয়ার্ড ৫৪ গড়তে আপনার পাশে।',

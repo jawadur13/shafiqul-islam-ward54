@@ -6,9 +6,14 @@ import { Achievements } from '@/components/sections/Achievements';
 import { CTABand } from '@/components/sections/CTABand';
 import { PageHero } from '@/components/sections/PageHero';
 import { WorkCards, WorkTimeline } from '@/components/sections/WorkCards';
+import {
+  WorkPhotoRail,
+  workPhotos,
+} from '@/components/sections/WorkPhotoRail';
 import { affiliations, crisisWork, socialWork } from '@/content/work';
 import type { Locale } from '@/content/types';
 import { buildMetadata } from '@/lib/metadata';
+import { cn } from '@/lib/utils';
 
 export async function generateMetadata({
   params,
@@ -28,6 +33,8 @@ export default async function WorkPage({
   setRequestLocale(locale);
 
   const t = await getTranslations('work');
+  // ছবি বসানো থাকলেই timeline-এর পাশে কলামটা খোলে; নইলে আগের মতোই narrow
+  const photos = workPhotos();
 
   return (
     <>
@@ -45,8 +52,18 @@ export default async function WorkPage({
       <Section tone="white">
         <Container>
           <SectionHeading title={t('crisisHeading')} />
-          <div className="mt-12 max-w-narrow">
-            <WorkTimeline items={crisisWork} />
+          <div
+            className={cn(
+              'mt-12',
+              photos.length > 0
+                ? 'grid gap-10 lg:grid-cols-[1fr_420px] lg:gap-14'
+                : 'max-w-narrow'
+            )}
+          >
+            <div className="max-w-narrow">
+              <WorkTimeline items={crisisWork} />
+            </div>
+            <WorkPhotoRail photos={photos} />
           </div>
         </Container>
       </Section>

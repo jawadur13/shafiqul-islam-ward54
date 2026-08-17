@@ -42,6 +42,21 @@ Next.js 15 (App Router) · TypeScript · Tailwind CSS · next-intl · lucide-rea
 | **লোগো/মনোগ্রাম** | `components/layout/Monogram.tsx` | খিলানের ভেতরে "শ" |
 | **নির্বাচনী মার্কা** | Hero badge + Footer chip | নিরপেক্ষ star motif + "শীঘ্রই বরাদ্দ হবে" |
 
+## পেজ ব্যানার
+
+হোম ছাড়া বাকি ছয় পেজের উপরে full-bleed ব্যানার — `public/img/hero-banner.jpeg`।
+এটা `components/sections/PageHero.tsx`-এর ডিফল্ট, তাই নতুন পেজ যোগ করলেও
+আপনা থেকেই বসে যায়।
+
+- **ছবি বদলাতে** ঐ ফাইলটা replace করলেই হয় — কোড ছুঁতে হবে না।
+- **মাপ:** ~2400 × 800 (3:1)। মোবাইলে center-crop হয়, তাই জরুরি বিষয়বস্তু
+  মাঝের ৪০%-এ রাখতে হবে; উপরে-নিচে ১৫% বাদ যেতে পারে।
+- ছবির উপরে তিন স্তরের সবুজ scrim — লেখার কলাম আলাদা করে গাঢ়, যাতে
+  উজ্জ্বল ছবিতেও eyebrow/হেডিং AA কনট্রাস্ট ধরে রাখে।
+- ফাইল না থাকলে আগের ivory ব্যান্ডেই নেমে যায় — ভুয়া ছবি বসে না।
+- কোনো পেজে ব্যানার না চাইলে `<PageHero image={null} … />`;
+  আলাদা ছবি চাইলে `<PageHero image="/img/hero/kaj.webp" … />`।
+
 ## ফন্ট
 
 `public/fonts/` — **Codepotro Abu Sayed** (SIL Open Font License, `OFL.txt` সাথে):
