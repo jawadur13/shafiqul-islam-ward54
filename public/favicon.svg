@@ -1,5 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="10" fill="#1C3424"/>
-  <path d="M18 50 V29 Q18 17 32 12 Q46 17 46 29 V50 Z" fill="none" stroke="#C4A24C" stroke-width="2.5"/>
-  <path d="M32 26 l2.6 5.4 5.9 .8 -4.3 4.1 1 5.9 -5.2-2.8 -5.2 2.8 1-5.9 -4.3-4.1 5.9-.8 Z" fill="#C4A24C"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" color="#FFFFFF">
+  <circle cx="100" cy="100" r="100" fill="#1C3424"/>
+  <!-- দলীয় প্রতীক — দাঁড়িপাল্লা। পাথগুলো components/ui/PartySymbol.tsx-এর সাথে এক;
+       একটা বদলালে অন্যটাও বদলাতে হবে। -->
+  <g transform="translate(16.3 0.9) scale(0.837)" fill="currentColor">
+    <path d="M100 18c3.2 4.6 4.6 9.4 4.6 14.6V52h-9.2V32.6c0-5.2 1.4-10 4.6-14.6Z"/>
+    <path d="M44 56.5c18-4.2 37.2-6.4 56-6.4s37.8 2.2 56 6.4v6.8c-14.6 3.2-30 5.2-45.6 6l-10.4 22-10.4-22c-15.6-.8-31-2.8-45.6-6v-6.8Z"/>
+    <circle cx="44" cy="55" r="10" fill="none" stroke="currentColor" stroke-width="7"/>
+    <circle cx="156" cy="55" r="10" fill="none" stroke="currentColor" stroke-width="7"/>
+    <g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round">
+      <path d="M44 65 8 150M44 65v85M44 65l36 85"/>
+      <path d="M156 65l-36 85M156 65v85M156 65l36 85"/>
+    </g>
+    <ellipse cx="44" cy="150" rx="36" ry="8.5" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="M8 150c0 19.9 16.1 36 36 36s36-16.1 36-36c-10 5.3-22.4 8-36 8s-26-2.7-36-8Z"/>
+    <ellipse cx="156" cy="150" rx="36" ry="8.5" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="M120 150c0 19.9 16.1 36 36 36s36-16.1 36-36c-10 5.3-22.4 8-36 8s-26-2.7-36-8Z"/>
+  </g>
 </svg>

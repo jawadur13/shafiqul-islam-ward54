@@ -14,14 +14,16 @@ export function PartySymbol({
   label,
   className,
 }: {
-  label: string;
+  /** দিলে প্রতীকটি screen reader-এ পড়বে; না দিলে সাজসজ্জা হিসেবে লুকানো থাকবে। */
+  label?: string;
   className?: string;
 }) {
   return (
     <svg
       viewBox="0 0 200 200"
-      role="img"
-      aria-label={label}
+      role={label ? 'img' : undefined}
+      aria-label={label || undefined}
+      aria-hidden={label ? undefined : true}
       className={cn('h-auto max-w-full', className)}
       fill="currentColor"
     >
