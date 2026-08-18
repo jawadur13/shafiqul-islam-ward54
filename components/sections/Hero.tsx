@@ -72,6 +72,9 @@ export async function Hero() {
             <p className="mt-5 text-center font-ui text-sm text-muted">
               {candidate.name[locale]} · {candidate.post[locale]}
             </p>
+            <p className="mt-1 text-center font-ui text-sm text-green-800">
+              {candidate.partyLine[locale]}
+            </p>
           </div>
         </div>
       </Container>

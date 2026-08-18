@@ -15,6 +15,10 @@ export const candidate = {
   },
   wardShort: { bn: 'ওয়ার্ড ৫৪ · ঢাকা উত্তর', en: 'Ward 54 · Dhaka North' },
   party: { bn: 'বাংলাদেশ জামায়াতে ইসলামী', en: 'Bangladesh Jamaat-e-Islami' },
+  partyLine: {
+    bn: 'বাংলাদেশ জামায়াতে ইসলামী, বাংলাদেশ',
+    en: 'Bangladesh Jamaat-e-Islami, Bangladesh',
+  },
   candidacy: { bn: 'দলীয় সমর্থিত প্রার্থী', en: 'Party-supported candidate' },
   symbol: { bn: 'শীঘ্রই বরাদ্দ হবে', en: 'To be assigned' }, // [TBD] placeholder
   dob: { bn: '৪ জানুয়ারি ১৯৭৫', en: '4 January 1975' },

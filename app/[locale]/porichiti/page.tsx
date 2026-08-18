@@ -57,8 +57,8 @@ export default async function AboutPage({
           </div>
           <div className="mx-auto w-full max-w-[340px]">
             <CandidatePortrait
-              src="/img/candidate-about.jpg"
               alt={`${candidate.name[locale]} — ${candidate.post[locale]}`}
+              withMap
             />
           </div>
         </Container>
